@@ -25,6 +25,23 @@ namespace BigStarter.Presentation.Controllers
         {
             return View();
         }
+        public IActionResult StartProject()
+        {
+            return View();
+        }
+        public IActionResult MyProject()
+        {
+            return View();
+        }
+        public IActionResult Profile()
+        {
+            return View();
+        }
+        public IActionResult Settings()
+        {
+            return View();
+        }
+
 
         public IActionResult SignInSocial(String provider)
         {
