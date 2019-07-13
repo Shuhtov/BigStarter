@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container" style="max-width: 800px">
+    <form class="border border-light p-5" oninput='Pass2.setCustomValidity(Pass2.value != Pass.value ? "Passwords do not match." : "")'>
+
+        <p class="h4 mb-4 text-center">Sign up</p>
+
+        <input type="text" id="RegisterName" class="form-control mb-4" placeholder="Login">
+
+        <input type="email" id="RegisterEmail" class="form-control mb-4" placeholder="E-mail">
+
+        <input type="password" id="Pass" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+
+        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Minimal 8 characters lenght</small>
+
+        <input type="password" id="Pass2" class="form-control mb-4" placeholder="Confirm password">
+
+
+        <button class="btn btn-info my-4 btn-block" type="submit">Sign up</button>
+
+        <div class="text-center">
+            <p>
+                By clicking
+                <em>Sign up</em> you agree to our
+                <a href="" target="_blank">terms of service</a> and
+                <a href="" target="_blank">terms of service</a>.
+            </p>
+        </div>
+    </form>
+</div>
+
