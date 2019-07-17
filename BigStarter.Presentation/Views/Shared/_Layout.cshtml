@@ -12,43 +12,63 @@
     </environment>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="/home/index">
-        <img src="~/images/logomin.png" style="height: 45px;" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler1" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarToggler1">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/home/index">
+            <img src="~/images/logomin.png" style="height: 45px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler1" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler1">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Explore
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1">Start a project</a>
-            </li>
-        </ul>
-        <form class="form-inline mr-2">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-info btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <partial name="_LoginPartial" />
-    </div>
-</nav>
-<hr/>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Explore
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <h6 class="dropdown-header">Categories</h6>
+                        <a class="dropdown-item" href="#">Arts</a>
+                        <a class="dropdown-item" href="#">Comics & Illustration</a>
+                        <a class="dropdown-item" href="#">Crafts</a>
+                        <a class="dropdown-item" href="#">Dance</a>
+                        <a class="dropdown-item" href="#">Design</a>
+                        <a class="dropdown-item" href="#">Fashion</a>
+                        <a class="dropdown-item" href="#">Film & Video</a>
+                        <a class="dropdown-item" href="#">Food</a>
+                        <a class="dropdown-item" href="#">Games</a>
+                        <a class="dropdown-item" href="#">Journalism</a>
+                        <a class="dropdown-item" href="#">Music</a>
+                        <a class="dropdown-item" href="#">Photography</a>
+                        <a class="dropdown-item" href="#">Publishing</a>
+                        <a class="dropdown-item" href="#">Technology</a>
+                        <a class="dropdown-item" href="#">Theater</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1">Start a project</a>
+                </li>
+            </ul>
+            <form class="form-inline mr-2">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+    <hr />
 
 
     @RenderBody()
 
+<footer class="page-footer font-small">
+    <div class="row">
+        
+    </div>
+
+</footer>
 
     @RenderSection("Scripts", required: false)
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

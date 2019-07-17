@@ -1,7 +1,111 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
 @{
     ViewData["Title"] = "Profile";
 }
+<div class="container">
+    <h2>Your profile</h2>
+</div>
 
-<h2>Profile</h2>
 
+<br />
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link badge-light fade show active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link badge-light" id="bonuses-tab" data-toggle="tab" href="#bonuses" role="tab" aria-controls="bonuses" aria-selected="false">Bonuses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link badge-light" id="myCompany-tab" data-toggle="tab" href="#myCompany" role="tab" aria-controls="myCompany" aria-selected="false">My company</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link badge-light" id="achievements-tab" data-toggle="tab" href="#achievements" role="tab" aria-controls="achievements" aria-selected="false">Achievements</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <br />
+            <div class="row">
+                <div class="col-3">
+                    <h4 class="display-6">@UserManager.GetUserName(User)</h4>
+                    <img src="~/images/defaultAvatar.jpg" />
+                    <p class="lead">About me</p>
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="badge badge-light">3</span> Campaigns</li>
+                        <li class="list-group-item"><span class="badge badge-light">2</span> Bonuses</li>
+                        <li class="list-group-item"><span class="badge badge-light">3</span> Achievements</li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <br />
+                    <div class="row justify-content-center">
+                        <div>
+                            <h4>Your info</h4>
+                        </div>
+                    </div>
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>Mail</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>Country</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>City</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>Facebook Link</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>Twitter Link</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>YouTube Link</th>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <th>Your Website</th>
+                            <td>John</td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+        </div>
+        <div class="tab-pane fade" id="bonuses" role="tabpanel" aria-labelledby="bonuses-tab">
+            <br />
+            <div class="row">
+                <p>You have no bonuses yet</p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="myCompany" role="tabpanel" aria-labelledby="myCompany-tab">
+            <br />
+            <div class="row">
+                <p>No campaigns under your belt yet, but you have great ideas and so do the people you know. You could start a campaign today or team up with friends to make your ideas come to life!</p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="achievements" role="tabpanel" aria-labelledby="achievements-tab">
+            <br />
+            <div class="row">
+                <p>You have no achievements yet</p>
+            </div>
+        </div>
+    </div>
+</div>
