@@ -1,7 +1,7 @@
 @using Microsoft.AspNetCore.Identity
-
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using BigStarter.Domain.Entities
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
 
 
 @if (UserManager.GetUserName(User) != null)
